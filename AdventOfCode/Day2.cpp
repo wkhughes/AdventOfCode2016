@@ -1,10 +1,6 @@
-#include <iostream>
-#include <deque>
 #include <sstream>
 #include <string>
 #include <algorithm>
-#include <vector>
-#include <iterator>
 
 using namespace std;
 
@@ -15,7 +11,8 @@ LLRURUDUULRURRUDURRDLUUUDDDDURUUDLLDLRULRUUDUURRLRRUDLLUDLDURURRDDLLRUDDUDLDUUDD
 UURUDRRDDLRRRLULLDDDRRLDUDLRRULUUDULLDUDURRDLDRRRDLRDUUUDRDRRLLDULRLUDUUULRULULRUDURDRDDLDRULULULLDURULDRUDDDURLLDUDUUUULRUULURDDDUUUURDLDUUURUDDLDRDLLUDDDDULRDLRUDRLRUDDURDLDRLLLLRLULRDDUDLLDRURDDUDRRLRRDLDDUDRRLDLUURLRLLRRRDRLRLLLLLLURULUURRDDRRLRLRUURDLULRUUDRRRLRLRULLLLUDRULLRDDRDDLDLDRRRURLURDDURRLUDDULRRDULRURRRURLUURDDDUDLDUURRRLUDUULULURLRDDRULDLRLLUULRLLRLUUURUUDUURULRRRUULUULRULDDURLDRRULLRDURRDDDLLUDLDRRRRUULDDD
 )";
 
-int main2() {
+string day2Solution()
+{
     string code = "";
 
     int x = 1;
@@ -23,8 +20,10 @@ int main2() {
 
     istringstream iss(input);
     string line;
-    while (getline(iss, line)) {
-        for (char& c : line) {
+    while (getline(iss, line))
+    {
+        for (char& c : line)
+        {
             if (c == 'R') x = min(x + 1, 2);
             if (c == 'L') x = max(x - 1, 0);
             if (c == 'D') y = min(y + 1, 2);
@@ -35,7 +34,5 @@ int main2() {
         code.append(to_string(num));
     }
 
-    cout << code << endl;
-
-    return 0;
+    return code;
 }

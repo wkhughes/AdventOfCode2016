@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -8,16 +7,19 @@
 
 using namespace std;
 
-struct TriangleSides {
+struct TriangleSides
+{
     int a;
     int b;
     int c;
 
-    int perimiter() const {
+    int perimiter() const
+    {
         return a + b + c;
     }
 
-    int longestSide() const {
+    int longestSide() const
+    {
         return max({ a, b, c });
     }
 };
@@ -26,26 +28,28 @@ vector<TriangleSides> readSides(istream& input);
 TriangleSides getSidesFromText(const string& sidesText);
 bool isPossibleTriangle(const TriangleSides& sides);
 
-int main() {
+string day3Solution()
+{
     ifstream inputFile;
     inputFile.open("day3_input.txt");
 
     vector<TriangleSides> sides = readSides(inputFile);
     auto numPossible = count_if(sides.begin(), sides.end(), isPossibleTriangle);
 
-    cout << numPossible << endl;
-
-    return 0;
+    return to_string(numPossible);
 }
 
-bool isPossibleTriangle(const TriangleSides& sides) {
+bool isPossibleTriangle(const TriangleSides& sides)
+{
     return sides.longestSide() < sides.perimiter() - sides.longestSide();
 }
 
-vector<TriangleSides> readSides(istream& input) {
+vector<TriangleSides> readSides(istream& input)
+{
     vector<string> lines;
     std::string line;
-    while (getline(input, line)) {
+    while (getline(input, line))
+    {
         lines.push_back(line);
     }
 
@@ -56,7 +60,8 @@ vector<TriangleSides> readSides(istream& input) {
     return allSides;
 }
 
-TriangleSides getSidesFromText(const string& sidesText) {
+TriangleSides getSidesFromText(const string& sidesText)
+{
     TriangleSides sides;
     istringstream iss(sidesText);
 
