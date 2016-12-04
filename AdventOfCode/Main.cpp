@@ -1,19 +1,21 @@
 #include <iostream>
 #include <string>
-#include <map>
+#include <unordered_map>
 #include <functional>
 #include "Day1.h"
 #include "Day2.h"
 #include "Day3.h"
+#include "Day4.h"
 
 using namespace std;
 
-const int DEFAULT_DAY = 3;
-const map<int, function<string ()>> DAY_SOLUTIONS
+constexpr int DEFAULT_DAY = 4;
+const unordered_map<int, function<string ()>> DAY_SOLUTIONS
 {
     { 1, day1Solution },
     { 2, day2Solution },
     { 3, day3Solution },
+    { 4, day4Solution }
 };
 
 int main(int argc, char* argv[])

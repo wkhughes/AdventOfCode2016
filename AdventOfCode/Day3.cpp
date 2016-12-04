@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <iterator>
+#include "InputUtils.h"
 
 using namespace std;
 
@@ -46,12 +47,7 @@ bool isPossibleTriangle(const TriangleSides& sides)
 
 vector<TriangleSides> readSides(istream& input)
 {
-    vector<string> lines;
-    std::string line;
-    while (getline(input, line))
-    {
-        lines.push_back(line);
-    }
+    vector<string> lines = InputUtils::readLines(input);
 
     vector<TriangleSides> allSides;
     allSides.reserve(lines.size());
