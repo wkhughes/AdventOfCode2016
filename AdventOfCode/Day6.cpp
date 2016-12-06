@@ -25,7 +25,7 @@ string day6Solution()
         for (unsigned int i = 0; i < line.length(); i++)
         {
             int& characterFrequencyForColumn = frequencies[i][line[i] - 'a'];
-            int& mostCommonCharacterFrequencyForColumn = frequencies[i][mostCommonCharacter[i] - 'a'];
+            int mostCommonCharacterFrequencyForColumn = frequencies[i][mostCommonCharacter[i] - 'a'];
 
             characterFrequencyForColumn++;
 
