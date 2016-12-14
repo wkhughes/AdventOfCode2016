@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
         {
             cout << solution->second() << endl;
         }
-        catch (exception const& e)
+        catch (const exception& e)
         {
             cerr << "Failure running solution for day " << day << " due to the following exception:\n" << e.what() << endl;
         }
