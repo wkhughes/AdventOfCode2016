@@ -22,7 +22,7 @@ string day9Solution()
         // Increment file length by number of characters read up to the marker
         decompressedFileLength += markerMatch.position();
 
-        // Decompressed length is incremented by the number of repeated characters that the market indicates
+        // Decompressed length is incremented by the number of repeated characters that the marker indicates
         int numCharacters = stoi(markerMatch[1]);
         int repetitions = stoi(markerMatch[2]);
         decompressedFileLength += numCharacters * repetitions;
