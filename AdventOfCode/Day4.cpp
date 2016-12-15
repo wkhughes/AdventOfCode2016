@@ -27,8 +27,7 @@ string day4Solution()
 {
     int realSectorIdSum = 0;
 
-    ifstream inputFile;
-    inputFile.open("day4_input.txt");
+    ifstream inputFile("day4_input.txt");
 
     vector<string> lines = InputUtils::readLines(inputFile);
     for (string& line : lines)

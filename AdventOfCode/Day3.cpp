@@ -31,8 +31,7 @@ bool isPossibleTriangle(const TriangleSides& sides);
 
 string day3Solution()
 {
-    ifstream inputFile;
-    inputFile.open("day3_input.txt");
+    ifstream inputFile("day3_input.txt");
 
     vector<TriangleSides> sides = readSides(inputFile);
     auto numPossible = count_if(sides.begin(), sides.end(), isPossibleTriangle);

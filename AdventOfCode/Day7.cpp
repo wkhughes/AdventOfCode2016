@@ -16,8 +16,7 @@ bool isAbba(string text);
 
 string day7Solution()
 {
-    ifstream inputFile;
-    inputFile.open("day7_input.txt");
+    ifstream inputFile("day7_input.txt");
 
     vector<string> lines = InputUtils::readLines(inputFile);
     auto numSupportTls = count_if(lines.begin(), lines.end(), supportsTls);

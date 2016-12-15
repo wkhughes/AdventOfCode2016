@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const char* DOOR_ID = "ffykfhsq";
+constexpr char* DOOR_ID = "ffykfhsq";
 
 string day5Solution()
 {

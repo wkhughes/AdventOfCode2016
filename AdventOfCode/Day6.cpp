@@ -13,8 +13,7 @@ constexpr int ALPHABET_SIZE = 26;
 
 string day6Solution()
 {
-    ifstream inputFile;
-    inputFile.open("day6_input.txt");
+    ifstream inputFile("day6_input.txt");
 
     vector<string> lines = InputUtils::readLines(inputFile);
     vector<array<int, ALPHABET_SIZE>> frequencies(lines[0].length(), { 0 });

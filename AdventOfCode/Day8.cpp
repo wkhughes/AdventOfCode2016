@@ -67,8 +67,7 @@ unique_ptr<Operation> parseOperation(string text);
 
 string day8Solution()
 {
-    ifstream inputFile;
-    inputFile.open("day8_input.txt");
+    ifstream inputFile("day8_input.txt");
     auto lines = InputUtils::readLines(inputFile);
 
     vector<unique_ptr<Operation>> operations;
