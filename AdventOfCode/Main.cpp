@@ -17,8 +17,8 @@
 
 using namespace std;
 
-constexpr int DEFAULT_DAY = 11;
-const unordered_map<int, function<string ()>> DAY_SOLUTIONS
+constexpr unsigned int DEFAULT_DAY = 11;
+const unordered_map<unsigned int, function<string ()>> DAY_SOLUTIONS
 {
     { 1, day1Solution },
     { 2, day2Solution },
@@ -36,7 +36,6 @@ const unordered_map<int, function<string ()>> DAY_SOLUTIONS
 int main(int argc, char* argv[])
 {
     int day = argc >= 2 ? stoi(argv[1]) : DEFAULT_DAY;
-    
     auto solution = DAY_SOLUTIONS.find(day);
     if (solution != DAY_SOLUTIONS.end())
     {
