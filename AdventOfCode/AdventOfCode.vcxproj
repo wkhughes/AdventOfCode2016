@@ -72,16 +72,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Libraries\boost_1_53_0;D:\Libraries\OpenSSL-Win32\include;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WTL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Libraries\OpenSSL-Win32\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\Libraries\boost_1_53_0;D:\Libraries\OpenSSL-Win32\include;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WTL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Libraries\OpenSSL-Win32\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -157,6 +153,7 @@
     <ClCompile Include="Day10.cpp" />
     <ClCompile Include="Day11.cpp" />
     <ClCompile Include="Day12.cpp" />
+    <ClCompile Include="Day13.cpp" />
     <ClCompile Include="Day2.cpp" />
     <ClCompile Include="Day3.cpp" />
     <ClCompile Include="Day4.cpp" />
@@ -183,6 +180,7 @@
     <ClInclude Include="Day10.h" />
     <ClInclude Include="Day11.h" />
     <ClInclude Include="Day12.h" />
+    <ClInclude Include="Day13.h" />
     <ClInclude Include="Day2.h" />
     <ClInclude Include="Day3.h" />
     <ClInclude Include="Day4.h" />

@@ -149,7 +149,7 @@ unsigned int calculateStepsToCompleteState(const State& initialState)
             {
                 bool isVisitedState = stepsFromInitialState.count(nextState) != 0;
                 unsigned int stateSteps = stepsFromInitialState[currentState] + 1;
-                if (isVisitedState == 0 || stateSteps < stepsFromInitialState[nextState])
+                if (!isVisitedState || stateSteps < stepsFromInitialState[nextState])
                 {
                     stepsFromInitialState[nextState] = stateSteps;
                     nextStates.push(nextState);
