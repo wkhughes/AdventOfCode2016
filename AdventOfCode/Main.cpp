@@ -17,10 +17,11 @@
 #include "Day12.h"
 #include "Day13.h"
 #include "Day14.h"
+#include "Day15.h"
 
 using namespace std;
 
-constexpr unsigned int DEFAULT_DAY = 14;
+constexpr unsigned int DEFAULT_DAY = 15;
 const unordered_map<unsigned int, function<string ()>> DAY_SOLUTIONS
 {
     { 1, day1Solution },
@@ -36,7 +37,8 @@ const unordered_map<unsigned int, function<string ()>> DAY_SOLUTIONS
     { 11, day11Solution },
     { 12, day12Solution },
     { 13, day13Solution },
-    { 14, day14Solution }
+    { 14, day14Solution },
+    { 15, day15Solution }
 };
 
 int main(int argc, char* argv[])
